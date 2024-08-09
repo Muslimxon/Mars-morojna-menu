@@ -1,0 +1,110 @@
+/* Default styles */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    box-sizing: border-box; 
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.navbar {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./assets/Supermarket-475x280\ \(1\).png);
+}
+
+.header {
+    width: 100%;
+    min-height: 300px; /* Use min-height instead of fixed height */
+    border-radius: 15px;
+    background-color: #fafafa;
+    margin-top: -15px;
+    padding: 20px;
+    text-align: center; /* Center align header text */
+}
+
+.menu-button {
+    margin-top: 15px;
+    font-size: 13px;
+    width: 120px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    color: pink;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.menu-button.active {
+    background-color: pink;
+    color: white;
+}
+
+/* Content styles */
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.card_containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align cards */
+}
+
+.card_1 {
+    width: 300px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+
+.card_1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card_1 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card_1 h1 {
+    font-size: 1.2em;
+    margin: 15px 0 5px;
+    color: #333;
+}
+
+.card_1 h3 {
+    font-size: 1em;
+    color: #555;
+    margin: 0;
+}
+
+/* Hide content by default */
+.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card_1 {
+        width: 90%;
+    }
+}
