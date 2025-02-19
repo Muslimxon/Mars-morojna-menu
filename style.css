@@ -15,7 +15,7 @@ body {
     height: 150px;
     background-size: cover;
     background-position: center;
-    background-image: url(./assets/Supermarket-475x280\ \(1\).png);
+    background-image: url(./assets/Supermarket-475x280\ \(1\).png); /* Adjust the URL if needed */
 }
 
 .header {
@@ -46,6 +46,54 @@ body {
     color: white;
 }
 
+.search {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 14px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.search:focus {
+    border-color: pink;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+.back-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: none;
+    background-color: pink;
+    color: white;
+    cursor: pointer;
+}
+
+.back-button.hidden {
+    display: none;
+}
+
+.search-results {
+    margin-top: 0px;
+    margin-left: 455px;
+    background: #fff;
+    border-radius: 15px;
+    width: 400px;
+}
+
+.search-results div {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search-results div:hover {
+    background-color: #f0f0f0;
+}
+
 /* Content styles */
 .content {
     display: none;
@@ -53,12 +101,6 @@ body {
 
 .content.active {
     display: block;
-}
-
-.card_containers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center align cards */
 }
 
 .card_1 {
@@ -106,5 +148,13 @@ body {
 @media (max-width: 768px) {
     .card_1 {
         width: 90%;
+    }
+    
+    .search {
+        width: 100%;
+    }
+
+    .search-results {
+        width: 100%;
     }
 }
